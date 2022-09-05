@@ -85,6 +85,25 @@
             {{/if}}
           {{/resume.basics}}
 
+          {{#if resume.skillsEnabled}}
+            <section class="resume-section">
+              <section class="sectionLeft">
+                <h2 class="resumeSection">Skills</h2>
+              </section>
+              <section class="sectionRight" id="skills">
+                {{#each resume.skills}}
+                  {{#if name}}
+                    <div class="skills">
+                      {{name}}
+                    </div>
+                  {{/if}}
+                {{/each}}
+                <div class="skills" />
+              </section>
+              <div class="clearfix"></div>
+            </section>
+          {{/if}}
+
           {{#if resume.workEnabled}}
             <section class="resume-section">
               <section class="sectionLeft">
@@ -314,34 +333,6 @@
             </section>
           {{/if}}
 
-          {{#if resume.skillsEnabled}}
-            <section class="resume-section">
-              <section class="sectionLeft">
-                <h2 class="resumeSection">Skills</h2>
-              </section>
-              <section class="sectionRight" id="skills">
-                {{#each resume.skills}}
-                  <div class="skills">
-                    {{#if name}}
-                      <h3 class="title">
-                        {{name}}
-                        {{#if level}}<span class="skill-level">{{level}}</span>{{/if}}
-                      </h3>
-                    {{/if}}
-                    {{#if keywords.length}}
-                      <ul>
-                        {{#each keywords}}
-                          <li>{{.}}</li>
-                        {{/each}}
-                      </ul>
-                    {{/if}}
-                  </div>
-                {{/each}}
-              </section>
-              <div class="clearfix"></div>
-            </section>
-          {{/if}}
-
           {{#if resume.languagesEnabled}}
             <section class="resume-section">
               <section class="sectionLeft">
@@ -402,20 +393,5 @@
         </div>
       </article>
     </main>
-    <footer>
-      {{#resume.basics}}
-        {{#if profiles.length}}
-          <div class="profiles">
-            {{#each profiles}}
-              <a href="{{url}}">{{network}}</a>
-            {{/each}}
-          </div>
-        {{/if}}
-      {{/resume.basics}}
-      <p id="copyright">
-        Powered by
-        <a href="https://github.com/jsonresume/resume-cli">resume-cli</a>
-      </p>
-    </footer>
   </body>
 </html>

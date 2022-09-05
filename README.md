@@ -1,8 +1,9 @@
 # jsonresume-theme-material
 
 This is the Material theme for [JSON Resume](http://jsonresume.org/) project.
+Fork of [nocturnalbeast's jsonresume-theme-material](https://github.com/nocturnalbeast/jsonresume-theme-material) with bugfixes and slight styling changes for output simplification.
 
-![demo](https://raw.githubusercontent.com/nocturnalbeast/jsonresume-theme-material/master/samples/preview.png)
+![demo](https://raw.githubusercontent.com/JayCanuck/jsonresume-theme-material/master/samples/preview.png)
 
 ## Getting started
 
@@ -92,7 +93,3 @@ In this template, only `summary` can host HTML content. This can be done like so
     "summary": "Point 1<br>Point 2<br>Point 3"
 }
 ```
-
-## License
-
-Available under [the MIT license](https://mit-license.org/).

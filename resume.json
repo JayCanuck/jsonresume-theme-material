@@ -92,22 +92,22 @@
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
-      ]
+      "name": "Multi-platform Webapps"
     },
     {
-      "name": "Compression",
-      "level": "Master",
-      "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
-      ]
+      "name": "React"
+    },
+    {
+      "name": "Typescript"
+    },
+    {
+      "name": "NodeJs"
+    },
+    {
+      "name": "NestJs"
+    },
+    {
+      "name": "Git"
     }
   ],
   "languages": [

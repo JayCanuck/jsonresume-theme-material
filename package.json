@@ -1,19 +1,31 @@
 {
-    "name": "jsonresume-theme-material",
+    "name": "@jaycanuck/jsonresume-theme-material",
     "version": "1.0.0",
     "description": "Material theme for JSON Resume",
-    "author": "nocturnalbeast",
+    "author": "Jason Robitaille <jaycanuck.dev@gmail.com>",
+    "license": "Apache-2.0",
     "scripts": {
-        "serve": "resume serve --theme .",
-        "export": "resume export resume --format pdf --theme ."
+        "serve": "resume serve --port 8000 --theme .",
+        "export": "resume export resume --format pdf --theme . resume.pdf",
+        "lint": "eslint .",
+        "fix": "eslint . --fix"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/nocturnalbeast/jsonresume-theme-material"
+        "url": "https://github.com/JayCanuck/jsonresume-theme-material"
     },
-    "license": "MIT",
     "dependencies": {
-        "handlebars": "^4.7.7",
-        "resume-cli": "3.0.6"
+        "handlebars": "^4.7.7"
+    },
+    "peerDependencies": {
+        "resume-cli": "^3.0.7"
+    },
+    "devDependencies": {
+        "eslint": "^8.23.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "resume-cli": "^3.0.7"
     }
 }
