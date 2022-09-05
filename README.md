@@ -7,63 +7,28 @@ Fork of [nocturnalbeast's jsonresume-theme-material](https://github.com/nocturna
 
 ## Getting started
 
-### Install Node.js
+### Installation
 
-Get the latest LTS/current installer for your platform from the official Node.js website [here](https://nodejs.org/en/download).
-
-### Install resume-cli (optional, but recommended)
-
-Once Node.js is installed, run the command `npm install -g resume-cli`.
-
-**Please note:** this is not necessary since the next step(s) take care of the same, but is recommended when working with other JSON Resume themes.
-
-### Download theme
-
-Do **either** of the following:
-
-- Clone the repository using the command `git clone https://github.com/nocturnalbeast/jsonresume-theme-material`
-- Download a [copy of the repository](https://github.com/nocturnalbeast/jsonresume-theme-material/archive/master.zip).
-
-### Install npm packages
-
-We need to install the dependencies. `cd` into the theme folder we just downloaded and run:
+We need to install the dependencies. Local projects/workspaces will need both `resume-cli` and this theme, `@jaycanuck/jsonresume-theme-material`.
 
 ```sh
-npm install
+npm install resume-cli @jaycanuck/jsonresume-theme-material
 ```
 
-This will read the local `package.json` and install the packages listed under `dependencies`.
+Resume-CLI will look for a valid `resume.json` file in the current working directory.
 
-### Hosting
+### Usage
 
-While inside the theme folder, run the following command:
+This theme can be used like other themes with `resume-cli` commands. 
 
-```
-npm run serve
-```
-
-You should now see this message:
-
-```
-Preview: http://localhost:4000
-Press ctrl-c to stop
+For serving locally:
+```sh
+resume serve --theme @jaycanuck/jsonresume-theme-material --port 8000
 ```
 
-Your default browser should open with the resume rendered from the sample `resume.json` included within the repository.
-
-### Exporting
-
-While inside the theme folder, run the following command:
-
-```
-npm run export
-```
-
-You should now see this message:
-
-```
-Done! Find your new .pdf resume at:
- ...path_to_repository/resume.pdf
+For exporting to PDF or HTML:
+```sh
+resume export --format pdf --theme @jaycanuck/jsonresume-theme-material resume.pdf
 ```
 
 ## Modifying the theme / Theme development
