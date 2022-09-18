@@ -13,6 +13,12 @@ Handlebars.registerHelper('join', function (array, sep) {
 function render(resume) {
   if (resume.work && resume.work.length) {
     resume.workEnabled = true;
+    resume.work.forEach(work => {
+      if ((!work.highlights || work.highlights.length === 0) && work.summary && work.summary.includes('\n')) {
+        work.highlights = work.summary.split(/[\n\r]+/);
+        delete work.summary;
+      }
+    });
   } else {
     resume.workEnabled = false;
   }
